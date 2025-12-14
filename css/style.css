@@ -1,3 +1,13 @@
-body{
-    background-color: lightgrey;
+.header {
+    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
+    width: auto;
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+    position: fixed;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
