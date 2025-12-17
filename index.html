@@ -12,41 +12,68 @@
     <body>
         <!--classes are used for styles, and ids are used for navigation-->
         <header class="topNav" >
-            <nav>
-                <a href="#home" class="active">Home</a>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
+            <div class="Logo">
+                <!--logo later-->
+                <h3>Sri Kumaran</h3>
+            </div>
+            <h4>
+                <nav class="navIcons">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </h4>
         </header>
 
-        <section id="home" class="section"> <!--Name and passion-->
-            <h3>Hey, Hi, Hello!!</h3>
-            <h1>This is SRI KUMARAN</h1>
-            <h5>
-                Learner passionate about Tech.
-                Boundless curiosity. Endless learning.
-            </h5>
-        </section>
+        <main>
+            <section id="home" class="home"> <!--Name and passion-->
+                <h3>Hey, Hi, Hello!!</h3>
+                <h1>This is SRI KUMARAN</h1>
+                <p>
+                    <b>Learner passionate about Tech.<br>
+                    Boundless curiosity. Endless learning.</b>
+                </p>
+            </section>
 
-        <section id="about" class="section"> <!--about, skills, experience, studies-->
-            <h1>About Me</h1>
-            <P>
-                I am an aspiring computer engineering student,<br>
-                with a strong passion in technology and programming.<br>
-                I enjoy learning theoretical concepts through hands-on implementation and practical problem-solving.
-            </P>
-        </section>
-        
-        
-        <section id="projects" class="section"><!--works tagged to their respevctive links-->
+            <section id="about" class="about"> <!--about, skills, experience, studies-->
+                <h1>About Me</h1>
+                <P>
+                    I am an aspiring Computer Engineering student,<br>
+                    with a strong passion in technology and programming.<br>
+                    I enjoy learning theoretical concepts through hands-on implementation and practical problem-solving.
+                </P>
+                <div class="skills">
+                    <h2 >Skills</h2>
+                    <div class="skill-tile-grid">
+                        <div class="skillTile">Unity</div>
+                        <div class="skillTile">Blender 3D</div>
+                        <div class="skillTile">Python</div>
+                        <div class="skillTile">C/C++</div>
+                        <div class="skillTile">Machine Learning</div>
+                        <div class="skillTile">HTML</div>
+                        <div class="skillTile">CSS</div>
+                    </div>
+                </div>
+            </section>
+            <!-- a section in about displaing my bio links for other porfolios-->
+            
+            <section id="projects" class="projects"><!--works tagged to their respevctive links-->
+                <h1>Projects</h1>
+                <div class="project-grid">
+                    <div class="project-tile">
+                        <div class="project-title">
 
-        </section>
-        
-        <section id="contact" class="section"><!--through email or any other method-->
+                        </div>
+                    </div>
+                </div>
 
-        </section>
+            </section>
+            
+            <section id="contact" class="contact"><!--through email or any other method-->
 
+            </section>
+        </main>
         <footer><!--not compulsory-->
 
         </footer>

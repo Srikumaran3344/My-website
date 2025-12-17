@@ -1,13 +1,130 @@
-.header {
-    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
-    width: auto;
-    background-size: 400% 400%;
-    animation: gradientMove 10s ease infinite;
-    position: fixed;
+/*comments in css*/
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+
 }
 
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+html{
+    scroll-behavior: smooth;
+    background: linear-gradient(white,black);
+}
+
+:root{
+    /*color*/
+    --primary-text-color:white;
+    --secondary-text-color: rgba(200, 200, 200, 0.81);
+    /*layout*/
+    --margin-left:10%;
+    --margin-right:20%;
+}
+
+ /*Navigation bar*/
+.topNav{
+    margin-left: 0%;
+    display: flex;
+    position: fixed;
+    top:0%;
+    width: 100%;
+    background-color: rgba(30, 30, 30, 0.61);
+    padding: 5vh 5vh;
+    backdrop-filter: blur(5px);
+}
+
+.Logo, .navIcons{
+    flex:1;
+}
+
+.navIcons{
+    text-align: right;
+    word-spacing: 400%;
+    
+}
+.Logo{
+    color: rgb(0, 0, 0); 
+}
+
+.Logo:hover{
+    color: rgb(255, 255, 255);
+}
+
+/*Body*/
+
+/*clamp(min, preferred, max)*/
+h1{
+    font-size: clamp(3.5rem, 8vw, 5.5rem);
+    font-weight: 800;
+    color: var(--primary-text-color);
+
+}
+
+h2 {
+    color: var(--primary-text-color);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 700;
+    padding-top: 2rem;
+
+}
+
+h3 {
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    font-weight: 600;
+
+}
+
+h4 {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: 600;
+
+}
+
+p{
+    font-size: clamp(0.5rem,2.5vw,1.5rem);
+    font-weight: 500;
+    padding: 1.5rem;
+}
+main{
+    margin-top: 97px;
+    color:var(--secondary-text-color);
+
+}
+
+.home{
+    
+    min-height: 90vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap:1rem;
+}
+
+.about{
+    margin-left: var(--margin-left);
+    margin-right: var(--margin-right);
+        
+}
+
+
+.skills{
+    display: flex;
+    flex-direction: column;
+}
+.skillTile{
+        border: 1px solid rgba(161, 161, 161, 0.763);
+        border-radius: 3px;
+        background: rgba(255, 255, 255, 0.153);
+        text-align: center;
+        padding: 0.75rem 1rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+
+        
+}
+.skill-tile-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap:2rem;
 }
