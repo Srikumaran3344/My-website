@@ -8,7 +8,7 @@
 
 html{
     scroll-behavior: smooth;
-    background: linear-gradient(white,black);
+    background: linear-gradient(rgb(0, 0, 0),rgb(255, 0, 0));
 }
 
 :root{
@@ -24,6 +24,7 @@ html{
 .topNav{
     margin-left: 0%;
     display: flex;
+    flex-wrap: nowrap;
     position: fixed;
     top:0%;
     width: 100%;
@@ -74,7 +75,7 @@ h3 {
 }
 
 h4 {
-    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
     font-weight: 600;
 
 }
@@ -100,17 +101,17 @@ main{
     text-align: center;
     gap:1rem;
 }
-
+/*about*/
 .about,.projects{
     padding:clamp(1rem,10vw,10rem);
 }
 
 
-.skills{
+.skills,.projects{
     display: flex;
     flex-direction: column;
 }
-.skillTile{
+.skill-tile{
         border: 1px solid rgba(161, 161, 161, 0.763);
         border-radius: 3px;
         background: rgba(255, 255, 255, 0.153);
@@ -125,4 +126,50 @@ main{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap:2rem;
+}
+
+/*projects*/
+.project-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap:2rem;
+
+}
+.project-tile{
+        border: 1px solid rgba(161, 161, 161, 0.763);
+        border-radius: 25px;
+        background: rgba(255, 255, 255, 0.153);
+        text-align: center;
+        padding: 1.25rem 1rem;
+        font-size: 1.1rem;
+        font-weight: 600;    
+        text-align: left;
+}
+
+.project-title{
+    color: var(--primary-text-color);
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding-bottom: 1rem;
+}
+.description{
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+/* skills inside project*/
+.project-skill-tile-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap:0.5rem;
+}
+.project-skill-tile{
+        border: 1px solid rgba(161, 161, 161, 0.763);
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.153);
+        text-align: center;
+        padding: 0.25rem 0.25rem;
+        font-size: 1rem;
+        font-weight: 600;
+        
 }
