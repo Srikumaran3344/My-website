@@ -68,19 +68,19 @@ h2 {
 }
 
 h3 {
-    font-size: clamp(1rem, 2.5vw, 2rem);
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
     font-weight: 600;
 
 }
 
 h4 {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
     font-weight: 600;
 
 }
 
 p{
-    font-size: clamp(0.5rem,2.5vw,1.5rem);
+    font-size: clamp(1.1rem,2.5vw,1.5rem);
     font-weight: 500;
     padding: 1.5rem;
 }
@@ -101,10 +101,8 @@ main{
     gap:1rem;
 }
 
-.about{
-    margin-left: var(--margin-left);
-    margin-right: var(--margin-right);
-        
+.about,.projects{
+    padding:clamp(1rem,10vw,10rem);
 }
 
 
