@@ -31,6 +31,7 @@ html{
     background-color: rgba(30, 30, 30, 0.61);
     padding: 5vh 5vh;
     backdrop-filter: blur(5px);
+    z-index: 100; /*to make sure it is always at the top regardless of the hover effects*/
 }
 
 .Logo, .navIcons{
@@ -65,6 +66,7 @@ h2 {
     font-size: clamp(1.5rem, 3vw, 2.5rem);
     font-weight: 700;
     padding-top: 2rem;
+    margin-bottom:1.25rem ;
 
 }
 
@@ -112,8 +114,8 @@ main{
     flex-direction: column;
 }
 .skill-tile{
-        border: 1px solid rgba(161, 161, 161, 0.763);
-        border-radius: 3px;
+        border: 1px solid rgba(161, 161, 161, 0.1);
+        border-radius: 10px;
         background: rgba(255, 255, 255, 0.153);
         text-align: center;
         padding: 0.75rem 1rem;
@@ -140,14 +142,14 @@ main{
 
 }
 .project-tile{
-        border: 1px solid rgba(161, 161, 161, 0.763);
-        border-radius: 25px;
-        background: rgba(255, 255, 255, 0.153);
-        text-align: center;
-        padding: 1.25rem 1rem;
-        font-size: 1.1rem;
-        font-weight: 600;    
-        text-align: left;
+    border: 1px solid rgba(161, 161, 161, 0.35);
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.153);
+    text-align: center;
+    padding: 1.25rem 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;    
+    text-align: left;
 }
 
 .project-title{
@@ -168,13 +170,13 @@ main{
     gap:0.5rem;
 }
 .project-skill-tile{
-        border: 1px solid rgba(161, 161, 161, 0.763);
-        border-radius: 20px;
-        background: rgba(255, 255, 255, 0.153);
-        text-align: center;
-        padding: 0.25rem 0.25rem;
-        font-size: 1rem;
-        font-weight: 600;
+    border: 1px solid rgba(161, 161, 161, 0.763);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.153);
+    text-align: center;
+    padding: 0.25rem 0.25rem;
+    font-size: 1rem;
+    font-weight: 600;
         
 }
 
@@ -212,7 +214,6 @@ main{
 
     text-decoration: none;
 }
-
 .platform{
     color:var(--primary-text-color);
     
@@ -225,4 +226,30 @@ main{
     
     font-size: 1.1rem;
     font-weight: 700; 
+}
+
+/*hover animation */
+.hover-animation {
+    transition:all 0.3s ease-out;
+}
+
+
+.hover-animation:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.25);
+    border-color: #ffffff;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.skills-text-hover-animation
+{
+    transition: color 0.3s ease-out;
+}
+.skills-text-hover-animation:hover{
+    color:white;
+}
+
+.project-skill-hover-animation
+{
+    transition: all;
 }
