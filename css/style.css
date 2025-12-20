@@ -21,7 +21,7 @@ html{
 }
 
  /*Navigation bar*/
-.topNav{
+.top-nav{
     margin-left: 0%;
     display: flex;
     flex-wrap: nowrap;
@@ -29,7 +29,7 @@ html{
     top:0%;
     width: 100%;
     background-color: rgba(30, 30, 30, 0.61);
-    padding: 5vh 5vh;
+    padding: 5vh 10vh;
     backdrop-filter: blur(5px);
     z-index: 100; /*to make sure it is always at the top regardless of the hover effects*/
 }
@@ -38,17 +38,16 @@ html{
     flex:1;
 }
 
-.navIcons{
-    text-align: right;
-    word-spacing: 400%;
-    
-}
-.Logo{
-    color: rgb(0, 0, 0); 
+.nav-icons{
+    display: flex;
+    padding: 0.25rem 0.25rem;
+    margin-left: auto;
+    gap: clamp(1rem,10vh,5rem);
 }
 
-.Logo:hover{
-    color: rgb(255, 255, 255);
+.nav-links{
+    text-decoration: none;
+    color: var(--secondary-text-color);
 }
 
 /*Body*/
@@ -237,6 +236,16 @@ main{
 }
 
 /*hover animation */
+/*top nav*/
+.Logo{
+    color: rgb(0, 0, 0); 
+}
+
+.Logo:hover{
+    color: rgb(255, 255, 255);
+}
+
+
 /*all hovers*/
 .hover-animation {
     transition:all 0.3s ease-out;
