@@ -146,6 +146,8 @@ main{
     border-radius: 25px;
     background: rgba(255, 255, 255, 0.153);
     text-align: center;
+    text-decoration: none;
+    color:var(--secondary-text-color);
     padding: 1.25rem 1rem;
     font-size: 1.1rem;
     font-weight: 600;    
@@ -178,6 +180,12 @@ main{
     font-size: 1rem;
     font-weight: 600;
         
+}
+
+.link-text-skill{
+    text-decoration: none;;
+    color:#49ffd2;
+    background:#99e2ff1e;
 }
 
 /*Contact me*/
@@ -229,6 +237,7 @@ main{
 }
 
 /*hover animation */
+/*all hovers*/
 .hover-animation {
     transition:all 0.3s ease-out;
 }
@@ -241,6 +250,7 @@ main{
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
 
+/*skills*/
 .skills-text-hover-animation
 {
     transition: color 0.3s ease-out;
@@ -249,7 +259,16 @@ main{
     color:white;
 }
 
+/*inside project tiles*/
 .project-skill-hover-animation
 {
-    transition: all;
+    transition: all 0.3s ease-out;
 }
+
+.project-skill-hover-animation:hover{
+    background: rgba(38, 255, 146, 0.225);
+    color:white;
+
+}
+
+/* top nav links*/
