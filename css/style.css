@@ -183,9 +183,46 @@ main{
 {
     padding-top:clamp(1rem,10vw,10rem);
     text-align: center;
+    align-content: start;
+
 }
 .desc
 {
     padding: 0.5rem;
     font-size: clamp(1.2rem,1.5vw,1.4rem);
+}
+
+.contact-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin:1rem auto;
+    max-width: 600px;
+
+    gap:1.5rem;
+
+}
+.contact-tile{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border: 1px solid rgba(161, 161, 161, 0.763);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.153);
+    text-align: left;
+    padding: 1.25rem 1.25rem;
+
+    text-decoration: none;
+}
+
+.platform{
+    color:var(--primary-text-color);
+    
+    font-size: 1.25rem;     
+
+}
+
+.platform-value{
+    color:var(--secondary-text-color);
+    
+    font-size: 1.1rem;
+    font-weight: 700; 
 }
