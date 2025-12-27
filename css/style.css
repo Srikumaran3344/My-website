@@ -44,7 +44,7 @@ html{
     display: flex;
     padding: 0.25rem 0.25rem;
     margin-left: auto;
-    gap: clamp(1rem,10vh,5rem);
+    gap: clamp(1rem,8vh,5rem);
 }
 
 .nav-links{
@@ -118,7 +118,7 @@ main{
 .skill-tile{
         border: 1px solid rgba(161, 161, 161, 0.1);
         border-radius: 10px;
-        background: rgba(255, 255, 255, 0.153);
+        background: rgba(255, 251, 244, 0.373);
         text-align: center;
         padding: 0.75rem 1rem;
         font-size: 1.1rem;
@@ -186,7 +186,7 @@ main{
 
 .link-text-skill{
     text-decoration: none;;
-    color:#49ffd2;
+    color:#00d2ac;
     background:#99e2ff1e;
 }
 
@@ -262,6 +262,7 @@ main{
     background: rgba(255, 255, 255, 0.25);
     border-color: #ffffff;
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(5px);
 }
 
 /*skills*/
@@ -270,7 +271,7 @@ main{
     transition: color 0.3s ease-out;
 }
 .skills-text-hover-animation:hover{
-    color:white;
+    color:rgb(58, 58, 58);
 }
 
 /*inside project tiles*/
@@ -280,8 +281,8 @@ main{
 }
 
 .project-skill-hover-animation:hover{
-    background: rgba(38, 255, 146, 0.225);
-    color:white;
+    background: rgba(209, 213, 183, 0.225);
+    color:rgb(0, 0, 0);
 
 }
 
@@ -332,7 +333,7 @@ main{
 /*canvas for scroll animation*/
 canvas{
     position: fixed;
-    padding: 10rem;
+    padding: clamp(1rem, 5vw, 10rem);
     top: 50%;
     transform: translateY(-50%);
     width: 95%;
