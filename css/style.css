@@ -31,7 +31,7 @@ html{
     top:0%;
     width: 100%;
     background-color: rgba(30, 30, 30, 0.61);
-    padding: 5vh 10vh;
+    padding: 5vh clamp(3rem,10vh,5rem);
     backdrop-filter: blur(5px);
     z-index: 100; /*to make sure it is always at the top regardless of the hover effects*/
 }
@@ -44,7 +44,7 @@ html{
     display: flex;
     padding: 0.25rem 0.25rem;
     margin-left: auto;
-    gap: clamp(1rem,8vh,5rem);
+    gap: clamp(1rem,7vh,50px);
 }
 
 .nav-links{
