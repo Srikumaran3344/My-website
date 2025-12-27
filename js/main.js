@@ -2,31 +2,17 @@
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-links");
 
-window.addEventListener("scroll", () => {
-    let current = "";
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
-        if (scrollY >= sectionTop) {
-            current = section.getAttribute("id");
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === `#${current}`) {
-            link.classList.add("active");
-        }
-    });
-});
-
 //background and text gradient
 
-const bgStart = [255, 251, 0]; 
-const bgEnd   = [0, 200, 255];
+const bgStart = [242, 245, 248];
+const bgEnd   = [226, 232, 200];
 
-const textStart = [30, 30, 60];
-const textEnd   = [230, 230, 245];
+const primarytextStart = [28, 38, 48];
+const primarytextEnd   = [52, 66, 79];
+
+const secondarytextStart = [90, 104, 117];
+const secondarytextEnd   = [130, 144, 156];
+
 
 function lerp(a, b, t){
     return a + (b-a) * t;
@@ -40,19 +26,6 @@ function lerpColor(c1, c2, t){
     )`;
 }
 
-window.addEventListener("scroll", () => {
-  const t = window.scrollY /(document.body.scrollHeight - innerHeight);
-
-  document.body.style.background =
-    `linear-gradient(
-      180deg,
-      ${lerpColor(bgStart, bgEnd, t)},
-      ${lerpColor(bgEnd, bgStart, t)}
-    )`;
-//change this to edit the variable --primary and secondary text in css
-  document.querySelector(".text").style.color =
-    lerpColor(textStart, textEnd, t);
-});
 
 
 //canvas for bacground animation with scroll
@@ -71,13 +44,55 @@ for (let i = 0; i < totalFrames; i++) {
   frames.push(img);
 }
 
-window.addEventListener("scroll", () => {
-  const t = window.scrollY /
-    (document.body.scrollHeight - innerHeight);
-  if(t>1)
-    t=1;
-  const index = Math.floor(t * (totalFrames - 1));
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  
-  ctx.drawImage(frames[index], 0, 0);
-});
+window.addEventListener("scroll", updateOnScroll);
+window.addEventListener("load",updateOnScroll);
+
+
+function updateOnScroll(){
+    const scrollTop = window.scrollY;
+    const maxScroll =
+        document.body.scrollHeight - window.innerHeight;
+
+    const t = Math.min(Math.max(scrollTop / maxScroll, 0), 1);
+
+    /* ---------- NAV ACTIVE STATE ---------- */
+    let current = "";
+    sections.forEach(section => {
+        if (scrollTop >= section.offsetTop - 120) {
+        current = section.id;
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.toggle(
+        "active",
+        link.getAttribute("href") === `#${current}`
+        );
+    });
+
+    /* ---------- BACKGROUND GRADIENT ---------- */
+    document.body.style.background = `
+        linear-gradient(
+        180deg,
+        ${lerpColor(bgStart, bgEnd, t)},
+        ${lerpColor(bgEnd, bgStart, t)}
+        )
+    `;
+
+    /* ---------- TEXT COLOR ---------- */
+    document.documentElement.style.setProperty(
+        "--primary-text-color",
+        lerpColor(primarytextStart, primarytextEnd, t)
+    );
+    document.documentElement.style.setProperty(
+        "--secondary-text-color",
+        lerpColor(secondarytextStart, secondarytextEnd, t)
+    );
+
+    /* ---------- CANVAS FRAME ---------- */
+    const frameIndex = Math.floor(t * (totalFrames - 1));
+    if (frames[frameIndex]?.complete) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(frames[frameIndex], 0, 0, canvas.width, canvas.height);
+    }
+}

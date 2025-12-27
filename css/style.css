@@ -14,11 +14,12 @@ html{
 
 :root{
     /*color*/
-    --primary-text-color:white;
-    --secondary-text-color: rgba(200, 200, 200, 0.81);
+    --primary-text-color:rgb(28, 38, 48);
+    --secondary-text-color: rgba(90, 104, 117);
     /*layout*/
     --margin-left:10%;
     --margin-right:20%;
+
 }
 
  /*Navigation bar*/
@@ -335,6 +336,6 @@ canvas{
     top: 50%;
     transform: translateY(-50%);
     width: 95%;
-    opacity: 0.5;
+    opacity: 0.2;
     z-index: -10;
 }
