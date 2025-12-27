@@ -74,7 +74,8 @@ for (let i = 0; i < totalFrames; i++) {
 window.addEventListener("scroll", () => {
   const t = window.scrollY /
     (document.body.scrollHeight - innerHeight);
-
+  if(t>1)
+    t=1;
   const index = Math.floor(t * (totalFrames - 1));
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   
